@@ -1,0 +1,27 @@
+# Environnements virtuels
+venv/
+.env
+.venv/
+
+# Caches Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.swp
+
+# Config IDE
+.vscode/
+.idea/
+*.iml
+
+# Autres
+.DS_Store
