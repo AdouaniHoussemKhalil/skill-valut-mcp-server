@@ -27,6 +27,82 @@ def web_search(query: str) -> List[Dict]:
     except:
         return "No results found"
 
+@mcp.tool()
+def github_search(tech: str, action: str) -> List[Dict]:
+    """
+    Search GitHub repositories based on technology and action.
+    Args:
+        tech (str): The technology to search for.
+        action (str): The action to perform (e.g., "find", "list").
+    Returns:
+        List[Dict]: The search results.
+    """
+    if tech.lower() == "react" :
+        url = "https://api.github.com/repos/facebook/react/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+    if tech.lower() == "dotnet" or tech.lower() == ".net":
+        url = "https://api.github.com/repos/dotnet/aspnetcore/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+
+    if tech.lower() == "python":
+        url = "https://api.github.com/repos/python/cpython/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+
+    if tech.lower() == "java":
+        url = "https://api.github.com/repos/openjdk/jdk/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+    if tech.lower() == "go":
+        url = "https://api.github.com/repos/golang/go/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+    if tech.lower() == "rust":
+        url = "https://api.github.com/repos/rust-lang/rust/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+    if tech.lower() == "elixir":
+        url = "https://api.github.com/repos/elixir-lang/elixir/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+        
+    if tech.lower() == "javascript":
+        url = "https://api.github.com/repos/javascript/javascript/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
+    if tech.lower() == "typescript":
+        url = "https://api.github.com/repos/microsoft/TypeScript/releases/latest"
+        res = requests.get(url)
+        if res.status_code == 200:
+            return [res.json()]
+        else:
+            return []
 
 
 if __name__ == "__main__":
